@@ -95,13 +95,15 @@ export const getDataCart = (user) => {
     axios.get("https://server-app-myshop.herokuapp.com/auth/user")
     .then(result => {
         userID = result.data.data.find((items) => items.name===user )._id;
+        axios.get("https://server-app-myshop.herokuapp.com/cart")
+        .then(result => {
+            let userCart = result.data.data.filter((items)=> items.user===userID)
+            console.log("user cart filtered" ,userCart)
+            dispatch(getDataSuccsess(userCart))
+        })
+        .catch(error => dispatch(getDataFailed(error)))
     })
-    axios.get("https://server-app-myshop.herokuapp.com/cart")
-    .then(result => {
-        let userCart = result.data.data.filter((items)=> items.user===userID)
-        console.log("user cart" ,userCart)
-        dispatch(getDataSuccsess(userCart))
-    } )
+   
     .catch(error => dispatch(getDataFailed(error)))
     
     }

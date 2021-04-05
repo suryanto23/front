@@ -11,6 +11,7 @@ function Catalog() {
     const dispatch = useDispatch();
     const user = useSelector(state => state.Sign.username)
     const displayAllProduct = useSelector(state => state.CommentReducer)  
+    console.log("ini display all product catalog " ,displayAllProduct)
 
     useEffect(() => {  
         dispatch(getData());

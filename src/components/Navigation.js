@@ -11,7 +11,7 @@ function Navigation() {
     return (
         <div>
 
-        <Navbar bg="dark" variant="dark" className="mb-5">
+        <Navbar bg="dark" variant="dark">
           <Nav className="mr-auto d-flex flex-lg-row w-100">
           <Link to = "/" className="nav-link">Home</Link>
           <Link to = "/catalog" className="nav-link">Catalog</Link>

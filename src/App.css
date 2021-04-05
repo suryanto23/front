@@ -1,11 +1,7 @@
-/* body {
-	margin: 0 !important;
-	padding: 0 !important;
+#carouselImg {
+	height: 800px;
+	object-fit: cover;
 }
-
-.Container {
-	max-width: 100% im !important;
-} */
 
 .card {
 	height: 250px;

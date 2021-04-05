@@ -1,4 +1,4 @@
-import { GET_DATA_REQUEST, GET_DATA_FAILED, GET_DATA_SUCCESS } from './../action/comment.action';
+import { GET_CART_REQUEST, GET_CART_FAILED, GET_CART_SUCCESS } from './../action/cart.action';
 
 
 const startState = {
@@ -7,27 +7,27 @@ const startState = {
     isLoading : false
 };
 
-const CommentReducer = (state = startState , action) => {
+const CartReducer = (state = startState , action) => {
 
     switch(action.type){
 
-        case GET_DATA_REQUEST:
-                console.log("Data on Request")
+        case GET_CART_REQUEST:
+                console.log("Cart on Request")
                 return{
                     ...state,
                     isLoading : true
                 };
 
-        case GET_DATA_FAILED:
-                console.log("Data Failed")
+        case GET_CART_FAILED:
+                console.log("Cart Failed")
                 return{
                     ...state,
                     isLoading : false,
                     error : action.error
                 };
 
-        case GET_DATA_SUCCESS:
-            console.log("Get Data Succsessfully")
+        case GET_CART_SUCCESS:
+            console.log("Get Cart Succsessfully")
             console.log("ini action result" ,action )
                 return{
                     ...state,
@@ -43,4 +43,4 @@ const CommentReducer = (state = startState , action) => {
 
 };
 
-export default CommentReducer;
+export default CartReducer;
