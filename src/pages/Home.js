@@ -48,7 +48,7 @@ function Home() {
           <Jumbotron className="w-100"> 
             <Row className="text-center d-flex justify-content-center"> 
               <Col xs={12}>
-                <h3 className="display-3 mb-5">Welcome to MyShop</h3>
+                <h3 className="display-3 mb-5">Welcome to GetBeans</h3>
               </Col>
               <Col xs={9}>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum unde in hic. Perspiciatis, culpa iste id dolorum modi 
